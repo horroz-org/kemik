@@ -23,6 +23,8 @@ class OutputManager{
     }
 
     public static function outputJSON($obj){
+        ob_end_clean();
+
         header("Content-Type: application/json");
         echo json_encode($obj);
     }
@@ -38,7 +40,7 @@ class OutputManager{
         header("Accept-Ranges: bytes");
         header("Content-Disposition: attachment; filename=\"$downloadFilename\"");
 
-        ob_clean();
+        ob_end_clean();
         flush();
 
         readfile($filePath);
@@ -47,6 +49,8 @@ class OutputManager{
     }
 
     public static function outputPlain($text){
+        ob_end_clean();
+        
         header("Content-Type: text/plain; charset=UTF-8");
         echo $text;
     }

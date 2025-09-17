@@ -17,7 +17,13 @@
 
     border: 1px lightgray solid;
 
+    font-size: 1.1rem;
+
     z-index: 1000;
+}
+
+.topbar a:visited {
+    color: #0000EE;
 }
 
 .topbar-sol {
@@ -67,7 +73,6 @@
 
 .topbar-baslik {
     font-weight: 500;
-    font-size: 1.1rem;
     margin-left: 0.8rem;
 
     text-decoration: none;
@@ -100,7 +105,6 @@
 .a-renksiz:link,
 .a-renksiz:visited {
     text-decoration: none;
-    color: #0000EE;
 }
 
 .a-renksiz:hover {

@@ -20,26 +20,17 @@ textarea {
 .anakutu {
     flex: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
+    margin: 1.5rem;
     margin-top: calc(50px + 2rem); /* topbar artık fixed (50px), 2rem de güzel dursun diye kemikte */
 
     min-height: 0;
 }
 
-.ortala-yatay {
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-}
-
 .yazi-blok {
     display: flex;
-    
     flex-direction: row;
-
-    justify-content: center;
     align-items: center;
 
     font-size: large;
@@ -47,6 +38,38 @@ textarea {
     margin-bottom: 1rem;
 }
 
+.as-yazi-tarih {
+    color: gray;
+    white-space: nowrap;
+}
+
+.anasayfa-baslik {
+    font-size: 2em;
+    font-weight: bold;
+
+    margin-bottom: 1rem;
+}
+
+/* OKUMA SAYFASI */
 .yazi-tarih {
     color: gray;
+    font-size: large;
+    margin-bottom: 0.2rem;
+}
+
+.yazi-baslik {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.yazi-wrapper {
+    font-size: large;
+}
+
+.yatay-cizgi {
+    border: none; 
+    border-bottom: 1px solid lightgray;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

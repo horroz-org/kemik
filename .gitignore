@@ -1,2 +1,13 @@
 vendor/
+
+yazilar/*
+!yazilar/.gitkeep
+logs/*
+!logs/.gitkeep
+
+Konfigurasyon.php
 .env
+
+public/assets/img/*
+!public/assets/img/horroz.png
+!public/assets/img/github.svg

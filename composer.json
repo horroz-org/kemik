@@ -1,10 +1,8 @@
 {
-    "require": {
-        "erusev/parsedown": "^1.7"
-    },
     "autoload": {
         "psr-4": {
-            "Core\\": "src/Core/"
+            "Core\\": "src/Core/",
+            "Uygulama\\": "src/Uygulama/"
         }
     }
 }
