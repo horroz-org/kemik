@@ -11,16 +11,18 @@ class Isaretleyici {
      */
     public static function htmlCevir($yazi){
         $patterns = [
-            '/\#\# (.+)/' => '<div class="y-baslik-2">$1</div>', // başlık 2
-            '/\# (.+)/' => '<div class="y-baslik-1">$1</div>',   // başlık 1
+            '/\#\# (.+)/' => '<div class="y-baslik-2">$1</div>',                            // başlık 2
+            '/\# (.+)/' => '<div class="y-baslik-1">$1</div>',                              // başlık 1
 
-            '/\*\*(.+?)\*\*/' => '<strong>$1</strong>',          // kalın -> **
-            '/\*(.+?)\*/' => '<em>$1</em>',                      // italik -> *
-            '/\=\=(.+?)\=\=/' => '<mark>$1</mark>',              // haylayt -> ==
+            '/\*\*(.+?)\*\*/' => '<strong>$1</strong>',                                     // kalın -> **
+            '/\*(.+?)\*/' => '<em>$1</em>',                                                 // italik -> *
+            '/\=\=(.+?)\=\=/' => '<mark>$1</mark>',                                         // haylayt -> ==
             
-            '/\[(.+?)\]\((.+?)\)/' => '<a href="$2">$1</a>',     // md gibi link [Abi](maykıl.net)
+            '/\!\[(.+?)\]\((.+?)\|(\d+)\)/' => '<img src="$2" alt="$1" width="$3">',        // genişlik te var ![bong](https://mo.net/tonkos.png|200)
+            '/\!\[(.+?)\]\((.+?)\)/' => '<img src="$2" alt="$1">',                          // md gibi resim ![Tokonko](https://mo.net/1.png)
+            '/\[(.+?)\]\((.+?)\)/' => '<a href="$2">$1</a>',                                // md gibi link [Abi](maykıl.net)
             
-            '/^- (.+)/m' => '<li>$1</li>',                       // liste
+            '/^- (.+?)(?:\n|$)/m' => '<li>$1</li>',                                         // liste
         ];
     
         foreach ($patterns as $pattern => $replace) {
