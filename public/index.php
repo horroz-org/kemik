@@ -9,8 +9,8 @@ use \Uygulama\Uzman as Uzman;
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo $SITE_BASLIK; ?></title>
-        <link rel="stylesheet" href="/assets/css/topbar.css">
-        <link rel="stylesheet" href="/assets/css/genel.css">
+        <link rel="stylesheet" href="assets/css/topbar.css">
+        <link rel="stylesheet" href="assets/css/genel.css">
     </head>
     <body>
         <div class="index-layout">
