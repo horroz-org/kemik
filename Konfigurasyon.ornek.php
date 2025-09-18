@@ -5,7 +5,7 @@
 
 $SITE_BASLIK = "Kemik";
 $SITE_ANASAYFA_YAZILAR_METIN = "Yazılar";
-$SITE_FOOTER = "(c) 2025 horroz.org"; // istemiyorsanız NULL
+$SITE_FOOTER = "(c) 2025 horroz.org"; // istemiyorsanız null
 
 $SITE_LOGO = "assets/img/horroz.png"; // topbardaki logonun dosya adı
 $SITE_TOPBAR_SAGBUTON = 

@@ -7,23 +7,20 @@ use \Core\OutputManager;
 $headers = getallheaders();
 
 // Token kontrol
-$token = NULL;
-if (isset($headers['Authorization'])) {
-    $authHeader = $headers['authorization'] ?? $headers['Authorization'];
-    
-    // Authorization: Token askdjalfklnlsdg9.qjflkelkfjlkw
-    if (preg_match('/Token\s(\S+)/', $authHeader, $matches)) {
-        $token = $matches[1];
-    }
+// Authorization: Token askdjalfklnlsdg9.qjflkelkfjlkw
+$token = null;
+$authHeader = $headers['authorization'] ?? $headers['Authorization'] ?? null;
+if ($authHeader && preg_match('/Token\s(\S+)/', $authHeader, $matches)) {
+    $token = $matches[1];
 }
 
-if($token === NULL){
+if($token === null){
     OutputManager::error("Yok abicim, token koymamışsın.", 401);
     die();
 }
 
 $tokenData = Auth::verifyToken($token);
-if($tokenData === NULL){
+if($tokenData === null){
     OutputManager::error("Token yanlış, yoksa sen başka birisi misin?", 401);
     die();
 }
