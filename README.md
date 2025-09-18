@@ -19,7 +19,7 @@ Yazı yükleme [extra/yaziYukle.sh](extra/yaziYukle.sh) ile yapılmakta idir. İ
 Yazı formatı (Markdown'a benzemekte):
 ```md
 ---
-baslik: Hoş geldiniz yazısı
+baslik: Kemik işaretleme dili hakkında
 tarih: 1258221395
 ---
 
