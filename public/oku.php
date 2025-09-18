@@ -16,11 +16,11 @@ $yaziId = trim($_GET["i"]);
         <link rel="stylesheet" href="assets/css/isaretleme.css">
     </head>
     <body>
-        <div class="index-layout">
+        <div class="oku-index-layout">
             <!-- topbar -->
             <?php TM::print("topbar", ["baslik" => $SITE_BASLIK, "logo" => $SITE_LOGO, "sagbutonlar" => $SITE_TOPBAR_SAGBUTON]) ?>
 
-            <div class="anakutu">
+            <div class="anakutu oku-anakutu">
                 <?php Uzman::oku($yaziId) ?>
             </div>
         </div>

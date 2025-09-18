@@ -72,4 +72,30 @@ textarea {
 
     margin-top: 1rem;
     margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* YAZI EKRANI */
+.oku-index-layout {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.oku-anakutu {
+    align-items: center;
+
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .oku-index-layout {
+        display: block;
+    }
+    
+    .oku-anakutu {
+        align-items: normal;
+        width: auto;
+    }
 }
