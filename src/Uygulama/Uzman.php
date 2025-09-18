@@ -51,7 +51,11 @@ class Uzman {
 
         foreach ($dosyaListe as $dosya) {
             $dosyaIcerik = file_get_contents(BASE_PATH . "/yazilar/" . $dosya);
-            $yaziListe[] = Isaretleyici::metadataAl($dosyaIcerik);
+            
+            $data = Isaretleyici::metadataAl($dosyaIcerik);
+            $data["id"] = pathinfo($dosya, PATHINFO_FILENAME);
+
+            $yaziListe[] = $data;
         }
 
         // bi de tarihe göre sıralıyalım abicim

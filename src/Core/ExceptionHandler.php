@@ -5,8 +5,6 @@ class ExceptionHandler{
     private function __construct(){}
     
     public static function exceptionHandler(\Throwable $exception){
-        ob_end_clean();
-        
         $error = "Internal server error.";
         $debug = "Exception at " . $exception->getFile() . ":" . $exception->getLine()  . " -> " . $exception->getMessage();
         if(\Core\Utils::isDebugModeOn()){
@@ -17,6 +15,7 @@ class ExceptionHandler{
             echo("Hata meydana geldi, kayıtlara geçti. Açıklama:\n$error");
         }
         else{
+            ob_end_clean();
             \Core\OutputManager::error($error, 500);
         }
 

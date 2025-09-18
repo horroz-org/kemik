@@ -4,5 +4,8 @@
             "Core\\": "src/Core/",
             "Uygulama\\": "src/Uygulama/"
         }
+    },
+    "require": {
+        "tuupola/base62": "^2.1"
     }
 }
