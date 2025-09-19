@@ -24,8 +24,5 @@ $yaziId = trim($_GET["i"]);
                 <?php Uzman::oku($yaziId) ?>
             </div>
         </div>
-
-        <!-- footer -->
-        <?php TM::print("footer", ["metin" => $SITE_FOOTER]) ?>
     </body>
 </html>
