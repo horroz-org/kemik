@@ -17,6 +17,10 @@ textarea {
     outline: none;
 }
 
+ul {
+    margin: 0;
+}
+
 .anakutu {
     flex: 1;
     display: flex;
